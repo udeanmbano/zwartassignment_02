@@ -1,0 +1,10 @@
+C:\Projects\ZwartsSolution\ZwartsJWTApi.Core\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\ZwartsSolution\ZwartsJWTApi.Core\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Core.AssemblyInfoInputs.cache
+C:\Projects\ZwartsSolution\ZwartsJWTApi.Core\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Core.AssemblyInfo.cs
+C:\Projects\ZwartsSolution\ZwartsJWTApi.Core\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Core.csproj.CoreCompileInputs.cache
+C:\Projects\ZwartsSolution\ZwartsJWTApi.Core\bin\Debug\netcoreapp3.1\ZwartsJWTApi.Core.deps.json
+C:\Projects\ZwartsSolution\ZwartsJWTApi.Core\bin\Debug\netcoreapp3.1\ZwartsJWTApi.Core.dll
+C:\Projects\ZwartsSolution\ZwartsJWTApi.Core\bin\Debug\netcoreapp3.1\ZwartsJWTApi.Core.pdb
+C:\Projects\ZwartsSolution\ZwartsJWTApi.Core\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Core.dll
+C:\Projects\ZwartsSolution\ZwartsJWTApi.Core\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Core.pdb
+C:\Projects\ZwartsSolution\ZwartsJWTApi.Core\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Core.csprojAssemblyReference.cache
