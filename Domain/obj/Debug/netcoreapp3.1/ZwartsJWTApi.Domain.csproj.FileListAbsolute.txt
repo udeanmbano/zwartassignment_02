@@ -1,0 +1,9 @@
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Domain\bin\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.deps.json
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Domain\bin\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.dll
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Domain\bin\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.pdb
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Domain\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Domain\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.AssemblyInfoInputs.cache
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Domain\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.AssemblyInfo.cs
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Domain\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.csproj.CoreCompileInputs.cache
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Domain\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.dll
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Domain\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.pdb

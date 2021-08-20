@@ -1,0 +1,13 @@
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Application\bin\Debug\netcoreapp3.1\ZwartsJWTApi.Application.deps.json
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Application\bin\Debug\netcoreapp3.1\ZwartsJWTApi.Application.dll
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Application\bin\Debug\netcoreapp3.1\ZwartsJWTApi.Application.pdb
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Application\bin\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.dll
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Application\bin\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.pdb
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Application\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Application.csprojAssemblyReference.cache
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Application\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Application\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Application.AssemblyInfoInputs.cache
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Application\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Application.AssemblyInfo.cs
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Application\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Application.csproj.CoreCompileInputs.cache
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Application\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Application.csproj.CopyComplete
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Application\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Application.dll
+C:\Projects\Blog\cqrs-with-net-core-mediatr\Application\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Application.pdb
