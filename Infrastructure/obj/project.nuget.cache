@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zYzm8ig7nYvvI2XCDn3Bw5ysImMRIamCRLrBOh9othmiwlA6xa+GD8TDEmeN9XerVbM3qJgsvydNJOI6csWx7g==",
+  "dgSpecHash": "A2F5JzsdSEN3tO8ex3lHVNT3OK8TManQxVToP5OO/K/V3NfSEuUBShcKTwibSRlqzF+iPW288gyW/p6I16pn9A==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Infrastructure\\ZwartsJWTApi.Infrastructure.csproj",
+  "projectFilePath": "C:\\Projects\\ZwartsSolution\\Infrastructure\\ZwartsJWTApi.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\udean\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\udean\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",

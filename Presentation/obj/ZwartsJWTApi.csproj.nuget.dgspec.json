@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Presentation\\ZwartsJWTApi.csproj": {}
+    "C:\\Projects\\ZwartsSolution\\Presentation\\ZwartsJWTApi.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Application\\ZwartsJWTApi.Application.csproj": {
+    "C:\\Projects\\ZwartsSolution\\Application\\ZwartsJWTApi.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Application\\ZwartsJWTApi.Application.csproj",
+        "projectUniqueName": "C:\\Projects\\ZwartsSolution\\Application\\ZwartsJWTApi.Application.csproj",
         "projectName": "ZwartsJWTApi.Application",
-        "projectPath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Application\\ZwartsJWTApi.Application.csproj",
+        "projectPath": "C:\\Projects\\ZwartsSolution\\Application\\ZwartsJWTApi.Application.csproj",
         "packagesPath": "C:\\Users\\udean\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Application\\obj\\",
+        "outputPath": "C:\\Projects\\ZwartsSolution\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\udean\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Domain\\ZwartsJWTApi.Domain.csproj": {
-                "projectPath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Domain\\ZwartsJWTApi.Domain.csproj"
+              "C:\\Projects\\ZwartsSolution\\Domain\\ZwartsJWTApi.Domain.csproj": {
+                "projectPath": "C:\\Projects\\ZwartsSolution\\Domain\\ZwartsJWTApi.Domain.csproj"
               }
             }
           }
@@ -80,14 +80,14 @@
         }
       }
     },
-    "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Domain\\ZwartsJWTApi.Domain.csproj": {
+    "C:\\Projects\\ZwartsSolution\\Domain\\ZwartsJWTApi.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Domain\\ZwartsJWTApi.Domain.csproj",
+        "projectUniqueName": "C:\\Projects\\ZwartsSolution\\Domain\\ZwartsJWTApi.Domain.csproj",
         "projectName": "ZwartsJWTApi.Domain",
-        "projectPath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Domain\\ZwartsJWTApi.Domain.csproj",
+        "projectPath": "C:\\Projects\\ZwartsSolution\\Domain\\ZwartsJWTApi.Domain.csproj",
         "packagesPath": "C:\\Users\\udean\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Domain\\obj\\",
+        "outputPath": "C:\\Projects\\ZwartsSolution\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\udean\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -134,14 +134,14 @@
         }
       }
     },
-    "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Infrastructure\\ZwartsJWTApi.Infrastructure.csproj": {
+    "C:\\Projects\\ZwartsSolution\\Infrastructure\\ZwartsJWTApi.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Infrastructure\\ZwartsJWTApi.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Projects\\ZwartsSolution\\Infrastructure\\ZwartsJWTApi.Infrastructure.csproj",
         "projectName": "ZwartsJWTApi.Infrastructure",
-        "projectPath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Infrastructure\\ZwartsJWTApi.Infrastructure.csproj",
+        "projectPath": "C:\\Projects\\ZwartsSolution\\Infrastructure\\ZwartsJWTApi.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\udean\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Projects\\ZwartsSolution\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\udean\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -158,8 +158,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Application\\ZwartsJWTApi.Application.csproj": {
-                "projectPath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Application\\ZwartsJWTApi.Application.csproj"
+              "C:\\Projects\\ZwartsSolution\\Application\\ZwartsJWTApi.Application.csproj": {
+                "projectPath": "C:\\Projects\\ZwartsSolution\\Application\\ZwartsJWTApi.Application.csproj"
               }
             }
           }
@@ -230,14 +230,14 @@
         }
       }
     },
-    "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Presentation\\ZwartsJWTApi.csproj": {
+    "C:\\Projects\\ZwartsSolution\\Presentation\\ZwartsJWTApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Presentation\\ZwartsJWTApi.csproj",
+        "projectUniqueName": "C:\\Projects\\ZwartsSolution\\Presentation\\ZwartsJWTApi.csproj",
         "projectName": "ZwartsJWTApi",
-        "projectPath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Presentation\\ZwartsJWTApi.csproj",
+        "projectPath": "C:\\Projects\\ZwartsSolution\\Presentation\\ZwartsJWTApi.csproj",
         "packagesPath": "C:\\Users\\udean\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Presentation\\obj\\",
+        "outputPath": "C:\\Projects\\ZwartsSolution\\Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\udean\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -254,11 +254,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Application\\ZwartsJWTApi.Application.csproj": {
-                "projectPath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Application\\ZwartsJWTApi.Application.csproj"
+              "C:\\Projects\\ZwartsSolution\\Application\\ZwartsJWTApi.Application.csproj": {
+                "projectPath": "C:\\Projects\\ZwartsSolution\\Application\\ZwartsJWTApi.Application.csproj"
               },
-              "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Infrastructure\\ZwartsJWTApi.Infrastructure.csproj": {
-                "projectPath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Infrastructure\\ZwartsJWTApi.Infrastructure.csproj"
+              "C:\\Projects\\ZwartsSolution\\Infrastructure\\ZwartsJWTApi.Infrastructure.csproj": {
+                "projectPath": "C:\\Projects\\ZwartsSolution\\Infrastructure\\ZwartsJWTApi.Infrastructure.csproj"
               }
             }
           }
@@ -273,6 +273,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.9, )"

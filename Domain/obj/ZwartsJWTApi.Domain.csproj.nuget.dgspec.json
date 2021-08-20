@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Domain\\ZwartsJWTApi.Domain.csproj": {}
+    "C:\\Projects\\ZwartsSolution\\Domain\\ZwartsJWTApi.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Domain\\ZwartsJWTApi.Domain.csproj": {
+    "C:\\Projects\\ZwartsSolution\\Domain\\ZwartsJWTApi.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Domain\\ZwartsJWTApi.Domain.csproj",
+        "projectUniqueName": "C:\\Projects\\ZwartsSolution\\Domain\\ZwartsJWTApi.Domain.csproj",
         "projectName": "ZwartsJWTApi.Domain",
-        "projectPath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Domain\\ZwartsJWTApi.Domain.csproj",
+        "projectPath": "C:\\Projects\\ZwartsSolution\\Domain\\ZwartsJWTApi.Domain.csproj",
         "packagesPath": "C:\\Users\\udean\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Blog\\cqrs-with-net-core-mediatr\\Domain\\obj\\",
+        "outputPath": "C:\\Projects\\ZwartsSolution\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\udean\\AppData\\Roaming\\NuGet\\NuGet.Config",

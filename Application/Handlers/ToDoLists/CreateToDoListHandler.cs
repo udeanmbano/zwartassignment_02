@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using ZwartsJWTApi.Application.Commands;
 using ZwartsJWTApi.Application.Commands.Responses;
+using ZwartsJWTApi.Application.Mappers.ToDoLists;
 using ZwartsJWTApi.Application.Repositories;
 using ZwartsJWTApi.Domain.Entities;
 
-namespace ZwartsJWTApi.Application.Commands
+namespace ZwartsJWTApi.Application.Handlers.ToDoLists
 {
     public class CreateToDoListHandler : IRequestHandler<CreateToDoListCommand, ToDoListResponse>
     {

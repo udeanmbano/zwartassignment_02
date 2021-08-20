@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.Queries.GetAllToDoList.ToDoListItem;
 using AutoMapper;
 using MediatR;
 using ZwartsJWTApi.Application.Repositories;
 using ZwartsJWTApi.Domain.Entities;
 
-namespace Application.Queries.GetAllToDoList
+namespace Application.Queries.GetAllToDoList.ToDoLists
 {
     public class GetAllToDoListQuery : IRequest<IEnumerable<ToDoList>>
     {

@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Application.Queries.GetAllToDoList
+namespace Application.Queries.GetAllToDoList.ToDoLists
 {
     public class GetAllToDoListResponse
     {

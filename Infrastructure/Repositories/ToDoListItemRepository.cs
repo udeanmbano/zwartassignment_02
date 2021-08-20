@@ -17,11 +17,13 @@ namespace ZwartsJWTApi.Repositories
             _appDbContext = applicationDbContext;
         }
 
-        public async Task DeleteToDoListItem(int toDoListId)
+        public async Task<int> DeleteToDoListItem(int toDoListId)
         {
+            int change = 0;
             ToDoListItems toDoListItem = await _appDbContext.toDoListItems.FindAsync(toDoListId);
             _appDbContext.toDoListItems.Remove(toDoListItem);
-            await _appDbContext.SaveChangesAsync();
+            change=await _appDbContext.SaveChangesAsync();
+            return change;
         }
 
         public async Task<IEnumerable<ToDoListItems>> GetToDoItemLists(int toDoListId)
@@ -34,29 +36,33 @@ namespace ZwartsJWTApi.Repositories
             return await _appDbContext.toDoListItems.Where(a => a.ToDoListItemId == toDoListItemId).ToListAsync();
         }
 
-        public async Task InsertToDoListItem(ToDoListItems toDoListItems)
+        public async Task <ToDoListItems> InsertToDoListItem(ToDoListItems toDoListItems)
         {
             await _appDbContext.AddAsync<ToDoListItems>(toDoListItems);
             await _appDbContext.SaveChangesAsync();
+            return toDoListItems;
         }
 
-        public async Task MarkToDone(ToDoListItems toDoListItems)
+        public async Task<ToDoListItems> MarkToDone(ToDoListItems toDoListItems)
         {
+            toDoListItems.ItemDoneStatus = true;
             _appDbContext.Entry(toDoListItems).State = EntityState.Modified;
             await _appDbContext.SaveChangesAsync();
+            return toDoListItems;
         }
 
      
 
         public async Task<bool> ToDoListItemExists(int toDoListItemId)
         {
-            return await _appDbContext.toDoLists.CountAsync(e => e.Id == toDoListItemId) > 0;
+            return await _appDbContext.toDoListItems.CountAsync(e => e.ToDoListItemId == toDoListItemId) > 0;
         }
 
-        public async Task UpdateToDoListItem(ToDoListItems toDoListItems)
+        public async Task<ToDoListItems> UpdateToDoListItem(ToDoListItems toDoListItems)
         {
             _appDbContext.Entry(toDoListItems).State = EntityState.Modified;
             await _appDbContext.SaveChangesAsync();
+            return toDoListItems;
         }
 
 

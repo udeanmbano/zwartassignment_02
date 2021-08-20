@@ -10,18 +10,19 @@ using ZwartsJWTApi.Infrastructure.Data;
 
 namespace ZwartsJWTApi.Repositories
 {
-    public class ToDoListRepository :IToDoListRepository
+    public class ToDoListRepository : IToDoListRepository
     {
         private ApplicationDbContext _appDbContext;
-        public ToDoListRepository(ApplicationDbContext applicationDbContext)  {
+        public ToDoListRepository(ApplicationDbContext applicationDbContext)
+        {
             _appDbContext = applicationDbContext;
         }
 
         public async Task<IEnumerable<ToDoList>> GetToDoLists(string UserId)
         {
-        
+
             return await _appDbContext.toDoLists.Where(a => a.UserId == UserId).ToListAsync();
-            
+
         }
 
         public async Task<IEnumerable<ToDoList>> GetToDoListByID(int toDoListId)
@@ -31,31 +32,68 @@ namespace ZwartsJWTApi.Repositories
 
         public async Task<bool> ToDoListExists(int toDoListId)
         {
-         return await _appDbContext.toDoLists.CountAsync(e => e.Id == toDoListId) > 0;
+            bool check =false;
+            try
+            {
+                check = await _appDbContext.toDoLists.CountAsync(e => e.Id == toDoListId) > 0;
+            }
+            catch (Exception f)
+            {
+
+                
+            }
+            return check;
         }
 
-       
-    
+
+
         public async Task<ToDoList> InsertToDoList(ToDoList toDoList)
         {
-           
-            await _appDbContext.AddAsync<ToDoList>(toDoList);
-            await _appDbContext.SaveChangesAsync();
+            try
+            {
+
+                await _appDbContext.AddAsync<ToDoList>(toDoList);
+                await _appDbContext.SaveChangesAsync();
+            }
+            catch (Exception f)
+            {
+
+               
+            }
             return toDoList;
         }
-        public async Task DeleteToDoList(int toDoListId)
+        public async Task<int> DeleteToDoList(int toDoListId)
         {
-            ToDoList toDoList = await _appDbContext.toDoLists.FindAsync(toDoListId);
-            _appDbContext.toDoLists.Remove(toDoList);
-            await _appDbContext.SaveChangesAsync();
+            int changes = 0;
+            try
+            {
+                ToDoList toDoList = await _appDbContext.toDoLists.FindAsync(toDoListId);
+                _appDbContext.toDoLists.Remove(toDoList);
+                changes = await _appDbContext.SaveChangesAsync();
+            }
+            catch (Exception f)
+            {
+                
+               
+            }
+            return changes;
         }
-      public async Task UpdateToDoList(ToDoList toDoList)
+        public async Task<ToDoList> UpdateToDoList(ToDoList toDoList)
         {
-            _appDbContext.Entry(toDoList).State = EntityState.Modified;
-            await _appDbContext.SaveChangesAsync();
+            try
+            {
+                _appDbContext.Entry(toDoList).State = EntityState.Modified;
+                await _appDbContext.SaveChangesAsync();
+            }
+            catch (Exception f)
+            {
+
+             
+            }
+            return toDoList;
         }
-      
-   
-       
+
+
+
     }
 }

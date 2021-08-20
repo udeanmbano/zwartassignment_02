@@ -11,11 +11,11 @@ namespace ZwartsJWTApi.Application.Repositories
     {
         Task<IEnumerable<ToDoListItems>> GetToDoItemLists(int toDoListId);
         Task<IEnumerable<ToDoListItems>> GetToDoListItemByID(int toDoListId);
-        Task InsertToDoListItem(ToDoListItems toDoListItems);
-        Task DeleteToDoListItem(int toDoListId);
-        Task UpdateToDoListItem(ToDoListItems toDoListItems);
+        Task<ToDoListItems> InsertToDoListItem(ToDoListItems toDoListItems);
+        Task<int> DeleteToDoListItem(int toDoListId);
+        Task<ToDoListItems> UpdateToDoListItem(ToDoListItems toDoListItems);
         Task<bool> ToDoListItemExists(int toDoListId);
-        Task MarkToDone(ToDoListItems toDoListItems);
+        Task<ToDoListItems> MarkToDone(ToDoListItems toDoListItems);
       
     }
 }

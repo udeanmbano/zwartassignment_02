@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ZwartsJWTApi.Domain.Entities
+namespace ZwartsJWTApi.Application.Commands.Responses
 {
     public class MessageResponse
     {

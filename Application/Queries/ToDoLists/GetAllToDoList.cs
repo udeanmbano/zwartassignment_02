@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using ZwartsJWTApi.Application.Mappers;
 
-namespace Application.Queries.GetAllToDoList
+namespace Application.Queries.GetAllToDoList.ToDoLists
 {
     public class GetAllToDoList : IMapFrom<GetAllToDoListResponse>
     {

@@ -12,8 +12,8 @@ namespace ZwartsJWTApi.Application.Repositories
         Task<IEnumerable<ToDoList>> GetToDoLists(String UserId);
         Task<IEnumerable<ToDoList>> GetToDoListByID(int toDoListId);
         Task<ToDoList>InsertToDoList(ToDoList toDoList);
-        Task DeleteToDoList(int toDoListId);
-        Task UpdateToDoList(ToDoList toDoList);
+        Task<int> DeleteToDoList(int toDoListId);
+        Task<ToDoList>UpdateToDoList(ToDoList toDoList);
         Task<bool> ToDoListExists(int toDoListId);
       
     }
