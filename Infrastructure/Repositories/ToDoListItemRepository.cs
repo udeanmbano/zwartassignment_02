@@ -20,9 +20,17 @@ namespace ZwartsJWTApi.Repositories
         public async Task<int> DeleteToDoListItem(int toDoListId)
         {
             int change = 0;
-            ToDoListItems toDoListItem = await _appDbContext.toDoListItems.FindAsync(toDoListId);
-            _appDbContext.toDoListItems.Remove(toDoListItem);
-            change=await _appDbContext.SaveChangesAsync();
+            try
+            {
+                ToDoListItems toDoListItem = await _appDbContext.toDoListItems.FindAsync(toDoListId);
+                _appDbContext.toDoListItems.Remove(toDoListItem);
+                change = await _appDbContext.SaveChangesAsync();
+            }
+            catch (Exception f)
+            {
+
+               
+            }
             return change;
         }
 
@@ -38,16 +46,31 @@ namespace ZwartsJWTApi.Repositories
 
         public async Task <ToDoListItems> InsertToDoListItem(ToDoListItems toDoListItems)
         {
-            await _appDbContext.AddAsync<ToDoListItems>(toDoListItems);
-            await _appDbContext.SaveChangesAsync();
+            try
+            {
+                await _appDbContext.AddAsync<ToDoListItems>(toDoListItems);
+                await _appDbContext.SaveChangesAsync();
+            }
+            catch (Exception f)
+            {
+
+            }
             return toDoListItems;
         }
 
         public async Task<ToDoListItems> MarkToDone(ToDoListItems toDoListItems)
         {
-            toDoListItems.ItemDoneStatus = true;
-            _appDbContext.Entry(toDoListItems).State = EntityState.Modified;
-            await _appDbContext.SaveChangesAsync();
+            try
+            {
+                toDoListItems.ItemDoneStatus = true;
+                _appDbContext.Entry(toDoListItems).State = EntityState.Modified;
+                await _appDbContext.SaveChangesAsync();
+            }
+            catch (Exception f)
+            {
+
+               
+            }
             return toDoListItems;
         }
 
@@ -55,13 +78,31 @@ namespace ZwartsJWTApi.Repositories
 
         public async Task<bool> ToDoListItemExists(int toDoListItemId)
         {
-            return await _appDbContext.toDoListItems.CountAsync(e => e.ToDoListItemId == toDoListItemId) > 0;
+            bool change = false;
+            try
+            {
+                change = await _appDbContext.toDoListItems.CountAsync(e => e.ToDoListItemId == toDoListItemId) > 0;
+            }
+            catch (Exception f)
+            {
+
+                
+            }
+
+            return change;
         }
 
         public async Task<ToDoListItems> UpdateToDoListItem(ToDoListItems toDoListItems)
         {
-            _appDbContext.Entry(toDoListItems).State = EntityState.Modified;
-            await _appDbContext.SaveChangesAsync();
+            try
+            {
+                _appDbContext.Entry(toDoListItems).State = EntityState.Modified;
+                await _appDbContext.SaveChangesAsync();
+            }
+            catch (Exception f)
+            {
+
+            }
             return toDoListItems;
         }
 

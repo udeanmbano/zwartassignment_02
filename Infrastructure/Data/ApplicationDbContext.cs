@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ZwartsJWTApi.Domain.Entities;
 
@@ -6,7 +7,8 @@ namespace ZwartsJWTApi.Infrastructure.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        //added to do list and items to application db context
+        //added user to do list and items to application db context
+        public DbSet<User> UserLists { get; set; }
         public DbSet<ToDoList> toDoLists { get; set; }
         public DbSet<ToDoListItems> toDoListItems { get; set; }
 

@@ -16,3 +16,4 @@ C:\Projects\ZwartsSolution\Domain\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.As
 C:\Projects\ZwartsSolution\Domain\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.csproj.CoreCompileInputs.cache
 C:\Projects\ZwartsSolution\Domain\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.dll
 C:\Projects\ZwartsSolution\Domain\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.pdb
+C:\Projects\ZwartsSolution\Domain\obj\Debug\netcoreapp3.1\ZwartsJWTApi.Domain.csprojAssemblyReference.cache

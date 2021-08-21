@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Application.Queries.GetAllToDoList;
 using Application.Queries.GetAllToDoList.ToDoListItem;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ZwartsJWTApi.Application.Commands;
@@ -11,7 +12,7 @@ using ZwartsJWTApi.Domain.Entities;
 
 namespace Presentation.Controllers
 {
-
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ToDoListItemController : BaseController

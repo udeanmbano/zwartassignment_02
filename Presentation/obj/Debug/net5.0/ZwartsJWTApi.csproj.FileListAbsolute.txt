@@ -88,6 +88,7 @@ C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\AutoMapper.Extensions.M
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Humanizer.dll
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\MediatR.dll
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -107,7 +108,6 @@ C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Microsoft.IdentityModel
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Microsoft.OpenApi.dll
-C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll

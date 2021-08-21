@@ -16,6 +16,8 @@ namespace Infrastructure
 
             services.AddTransient<IToDoListRepository, ToDoListRepository>();
             services.AddTransient<IToDoListItemRepository, ToDoListItemRepository>();
+            services.AddTransient<IToLogin,ToLoginRepository>();
+            services.AddTransient<IToRegister,ToRegisterRepository>();
             return services;
         }
     }

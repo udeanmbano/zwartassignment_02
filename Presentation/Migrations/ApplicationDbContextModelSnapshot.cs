@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ZwartsJWTApi.Infrastructure;
 using ZwartsJWTApi.Infrastructure.Data;
 
 namespace ZwartsJWTApi.Migrations
@@ -19,6 +18,21 @@ namespace ZwartsJWTApi.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.9")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Domain.Entities.User", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("UserIdentity")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("UserLists");
+                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -169,7 +183,12 @@ namespace ZwartsJWTApi.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("UserId1")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId1");
 
                     b.ToTable("toDoLists");
                 });
@@ -314,6 +333,15 @@ namespace ZwartsJWTApi.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ZwartsJWTApi.Domain.Entities.ToDoList", b =>
+                {
+                    b.HasOne("Domain.Entities.User", "User")
+                        .WithMany("toDoList")
+                        .HasForeignKey("UserId1");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ZwartsJWTApi.Domain.Entities.ToDoListItems", b =>
                 {
                     b.HasOne("ZwartsJWTApi.Domain.Entities.ToDoList", "toDoList")
@@ -322,6 +350,11 @@ namespace ZwartsJWTApi.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("toDoList");
+                });
+
+            modelBuilder.Entity("Domain.Entities.User", b =>
+                {
                     b.Navigation("toDoList");
                 });
 
