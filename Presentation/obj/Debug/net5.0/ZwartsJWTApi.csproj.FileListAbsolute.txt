@@ -134,7 +134,6 @@ C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\ZwartsJWTApi.Infrastruc
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\ZwartsJWTApi.Application.pdb
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\ZwartsJWTApi.Infrastructure.pdb
 C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\ZwartsJWTApi.Domain.pdb
-C:\Projects\ZwartsSolution\Presentation\obj\Debug\net5.0\ZwartsJWTApi.csprojAssemblyReference.cache
 C:\Projects\ZwartsSolution\Presentation\obj\Debug\net5.0\ZwartsJWTApi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projects\ZwartsSolution\Presentation\obj\Debug\net5.0\ZwartsJWTApi.AssemblyInfoInputs.cache
 C:\Projects\ZwartsSolution\Presentation\obj\Debug\net5.0\ZwartsJWTApi.AssemblyInfo.cs
@@ -150,3 +149,8 @@ C:\Projects\ZwartsSolution\Presentation\obj\Debug\net5.0\ZwartsJWTApi.dll
 C:\Projects\ZwartsSolution\Presentation\obj\Debug\net5.0\ref\ZwartsJWTApi.dll
 C:\Projects\ZwartsSolution\Presentation\obj\Debug\net5.0\ZwartsJWTApi.pdb
 C:\Projects\ZwartsSolution\Presentation\obj\Debug\net5.0\ZwartsJWTApi.genruntimeconfig.cache
+C:\Projects\ZwartsSolution\Presentation\obj\Debug\net5.0\ZwartsJWTApi.csprojAssemblyReference.cache
+C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Projects\ZwartsSolution\Presentation\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

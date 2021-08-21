@@ -1,0 +1,10 @@
+C:\Projects\ZwartsSolution\Domain\bin\Release\netcoreapp3.1\ZwartsJWTApi.Domain.deps.json
+C:\Projects\ZwartsSolution\Domain\bin\Release\netcoreapp3.1\ZwartsJWTApi.Domain.dll
+C:\Projects\ZwartsSolution\Domain\bin\Release\netcoreapp3.1\ZwartsJWTApi.Domain.pdb
+C:\Projects\ZwartsSolution\Domain\obj\Release\netcoreapp3.1\ZwartsJWTApi.Domain.csprojAssemblyReference.cache
+C:\Projects\ZwartsSolution\Domain\obj\Release\netcoreapp3.1\ZwartsJWTApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\ZwartsSolution\Domain\obj\Release\netcoreapp3.1\ZwartsJWTApi.Domain.AssemblyInfoInputs.cache
+C:\Projects\ZwartsSolution\Domain\obj\Release\netcoreapp3.1\ZwartsJWTApi.Domain.AssemblyInfo.cs
+C:\Projects\ZwartsSolution\Domain\obj\Release\netcoreapp3.1\ZwartsJWTApi.Domain.csproj.CoreCompileInputs.cache
+C:\Projects\ZwartsSolution\Domain\obj\Release\netcoreapp3.1\ZwartsJWTApi.Domain.dll
+C:\Projects\ZwartsSolution\Domain\obj\Release\netcoreapp3.1\ZwartsJWTApi.Domain.pdb

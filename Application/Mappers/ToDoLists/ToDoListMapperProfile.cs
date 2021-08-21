@@ -23,8 +23,8 @@ namespace ZwartsJWTApi.Application.Mappers.ToDoLists
     {
         public ToDoListUpdateMapperProfile()
         {
-            CreateMap<ToDoList, ToDoListItemResponse>().ReverseMap();
-            CreateMap<ToDoList, UpdateToDoListItemCommand>().ReverseMap();
+            CreateMap<ToDoList, ToDoListResponse>().ReverseMap();
+            CreateMap<ToDoList, UpdateToDoListCommand>().ReverseMap();
 
         }
     }
@@ -34,7 +34,7 @@ namespace ZwartsJWTApi.Application.Mappers.ToDoLists
         public ToDoListDeleteMapperProfile()
         {
             CreateMap<ToDoList, MessageResponse>().ReverseMap();
-            CreateMap<ToDoList, DeleteToDoListItemCommand>().ReverseMap();
+            CreateMap<ToDoList, DeleteToDoListCommand>().ReverseMap();
 
         }
     }

@@ -30,16 +30,16 @@ namespace ZwartsJWTApi.Infrastructure.Data
                 .OnDelete(DeleteBehavior.Cascade);
             });
 
-           /* builder.Entity<ToDoList>(table =>
+          builder.Entity<ToDoList>(table =>
             {
                 table.HasKey(x => x.Id);
 
-                table.HasOne(x => x.applicationUser)
+                table.HasOne(x => x.User)
                 .WithMany(x => x.toDoList)
                 .HasForeignKey(x => x.UserId)
-                .HasPrincipalKey(x => x.Id)
+                .HasPrincipalKey(x => x.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
-            });*/
+            });
             base.OnModelCreating(builder);
         }
 

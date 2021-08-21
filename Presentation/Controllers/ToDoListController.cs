@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Application.Queries.GetAllToDoList;
 using Application.Queries.GetAllToDoList.ToDoListItem;
@@ -11,7 +12,7 @@ using ZwartsJWTApi.Application.Commands;
 using ZwartsJWTApi.Application.Commands.Responses;
 using ZwartsJWTApi.Domain.Entities;
 
-namespace Presentation.Controllers
+namespace ZwartsJWTApi.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]
@@ -21,23 +22,39 @@ namespace Presentation.Controllers
        
         [HttpGet]
         [Route("ToDoLists/{userId}")]
-        public async Task<ActionResult<IEnumerable<ToDoList>>> GetAllToLists(string userId)
+        public async Task<ActionResult<IEnumerable<ToDoList>>> GetAllToLists(int userId)
         {
-            var request = new GetAllToDoListQuery();
-            request.UserID =userId;
-            var response = await Mediator.Send(request);
+            try
+            {
+                var request = new GetAllToDoListQuery();
+                request.UserID = userId;
+                var response = await Mediator.Send(request);
 
-            return Ok(response);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500, e.Message);
+            }
         }
         [HttpGet]
         [Route("GetToDoLists/{id}")]
-        public async Task<ActionResult<IEnumerable<ToDoList>>> GetAllToLists(int id)
+        public async Task<ActionResult<IEnumerable<ToDoList>>> GetToDoLists(int id)
         {
-            var request = new GetAllToDoListQueryById();
-            request.Id = id;
-            var response = await Mediator.Send(request);
+            try
+            {
+                var request = new GetAllToDoListQueryById();
+                request.Id = id;
+                var response = await Mediator.Send(request);
 
-            return Ok(response);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpPost]
@@ -45,8 +62,16 @@ namespace Presentation.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<ToDoList>> CreateToDoList([FromBody] CreateToDoListCommand command)
         {
-            var result = await Mediator.Send(command);
-            return Ok(result);
+            try
+            {
+                var result = await Mediator.Send(command);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpPut]
@@ -54,8 +79,16 @@ namespace Presentation.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<ToDoList>> UpdateToDoList([FromBody] UpdateToDoListCommand command)
         {
-            var result = await Mediator.Send(command);
-            return Ok(result);
+            try
+            {
+                var result = await Mediator.Send(command);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpDelete]
@@ -63,8 +96,16 @@ namespace Presentation.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<MessageResponse>> DeleteToDoList([FromBody] DeleteToDoListCommand command)
         {
-            var result = await Mediator.Send(command);
-            return Ok(result);
+            try
+            {
+                var result = await Mediator.Send(command);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500, e.Message);
+            }
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Application.Queries.GetAllToDoList;
 using Application.Queries.GetAllToDoList.ToDoListItem;
@@ -10,7 +11,7 @@ using ZwartsJWTApi.Application.Commands.Responses;
 using ZwartsJWTApi.Application.Commands.ToDoListItem;
 using ZwartsJWTApi.Domain.Entities;
 
-namespace Presentation.Controllers
+namespace ZwartsJWTApi.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]
@@ -22,21 +23,37 @@ namespace Presentation.Controllers
         [Route("ToDoListItems/{id}")]
         public async Task<ActionResult<IEnumerable<ToDoListItems>>> GetAllToLists(int id)
         {
-            var request = new GetAllToDoListItemQuery();
-            request.Id =id;
-            var response = await Mediator.Send(request);
+            try
+            {
+                var request = new GetAllToDoListItemQuery();
+                request.Id = id;
+                var response = await Mediator.Send(request);
 
-            return Ok(response);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500, e.Message);
+            }
         }
         [HttpGet]
         [Route("GetToDoListItem/{id}")]
         public async Task<ActionResult<IEnumerable<ToDoListItems>>> GetAllToListItems(int id)
         {
-            var request = new GetAllToDoListItemQueryById();
-            request.Id = id;
-            var response = await Mediator.Send(request);
+            try
+            {
+                var request = new GetAllToDoListItemQueryById();
+                request.Id = id;
+                var response = await Mediator.Send(request);
 
-            return Ok(response);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpPost]
@@ -44,8 +61,16 @@ namespace Presentation.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<ToDoListItems>> CreateToDoListITems([FromBody] CreateToDoListItemCommand command)
         {
-            var result = await Mediator.Send(command);
-            return Ok(result);
+            try
+            {
+                var result = await Mediator.Send(command);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpPut]
@@ -53,8 +78,16 @@ namespace Presentation.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<ToDoList>> UpdateToDoListItem([FromBody] UpdateToDoListItemCommand command)
         {
-            var result = await Mediator.Send(command);
-            return Ok(result);
+            try
+            {
+                var result = await Mediator.Send(command);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpPut]
@@ -62,16 +95,32 @@ namespace Presentation.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<ToDoListItems>> MarkToDoListItem([FromBody] MarkToDoListItemCommand command)
         {
-            var result = await Mediator.Send(command);
-            return Ok(result);
+            try
+            {
+                var result = await Mediator.Send(command);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500, e.Message);
+            }
         }
         [HttpDelete]
         [Route("DeleteToDolistItem")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<MessageResponse>> DeleteToDoListItem([FromBody] DeleteToDoListItemCommand command)
         {
-            var result = await Mediator.Send(command);
-            return Ok(result);
+            try
+            {
+                var result = await Mediator.Send(command);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500, e.Message);
+            }
         }
 
     }

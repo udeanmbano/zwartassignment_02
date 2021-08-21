@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Presentation.Controllers
+namespace ZwartsJWTApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

@@ -23,7 +23,7 @@ namespace ZwartsJWTApi.Repositories
             try
             {
                 ToDoListItems toDoListItem = await _appDbContext.toDoListItems.FindAsync(toDoListId);
-                _appDbContext.toDoListItems.Remove(toDoListItem);
+                _appDbContext.Remove(toDoListItem);
                 change = await _appDbContext.SaveChangesAsync();
             }
             catch (Exception f)
@@ -62,9 +62,11 @@ namespace ZwartsJWTApi.Repositories
         {
             try
             {
-                toDoListItems.ItemDoneStatus = true;
-                _appDbContext.Entry(toDoListItems).State = EntityState.Modified;
-                await _appDbContext.SaveChangesAsync();
+                ToDoListItems toDoListItemss = await _appDbContext.toDoListItems.FindAsync(toDoListItems.ToDoListItemId);
+                toDoListItemss.ItemDoneStatus = true;
+                _appDbContext.Update(toDoListItemss);
+
+               await _appDbContext.SaveChangesAsync();
             }
             catch (Exception f)
             {
@@ -96,7 +98,9 @@ namespace ZwartsJWTApi.Repositories
         {
             try
             {
-                _appDbContext.Entry(toDoListItems).State = EntityState.Modified;
+                ToDoListItems toDoListItemss = await _appDbContext.toDoListItems.FindAsync(toDoListItems.ToDoListItemId);
+                toDoListItemss.ItemDoneStatus = toDoListItems.ItemDoneStatus;
+                toDoListItemss.ToDoItem=toDoListItems.ToDoItem;
                 await _appDbContext.SaveChangesAsync();
             }
             catch (Exception f)

@@ -9,7 +9,7 @@ namespace ZwartsJWTApi.Application.Repositories
 {
    public interface IToDoListRepository 
     {
-        Task<IEnumerable<ToDoList>> GetToDoLists(String UserId);
+        Task<IEnumerable<ToDoList>> GetToDoLists(int UserId);
         Task<IEnumerable<ToDoList>> GetToDoListByID(int toDoListId);
         Task<ToDoList>InsertToDoList(ToDoList toDoList);
         Task<int> DeleteToDoList(int toDoListId);

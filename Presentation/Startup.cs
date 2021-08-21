@@ -31,8 +31,7 @@ namespace Presentation
             services.AddApplication();
             services.AddControllers();
             services.AddInfrastructure(Configuration);
-            services.AddCors(); // Make sure you call this previous to AddMvc          
-
+            services.AddCors();
             services.AddSwaggerGen(config =>
             {
                 config.SwaggerDoc("v1", new OpenApiInfo() { Title = "ZwartsApi", Version = "v1" });
@@ -88,6 +87,11 @@ namespace Presentation
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
                 };
             });
+
+            services.AddControllersWithViews()
+    .AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

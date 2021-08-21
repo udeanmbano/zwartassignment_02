@@ -34,48 +34,56 @@ namespace ZwartsJWTApi.Repositories
         public async Task<TokenResponse> Login(LoginModel loginModel)
         {
             var tokenResponse = new TokenResponse();
-            var user = await userManager.FindByNameAsync(loginModel.Username);
-            if (user != null && await userManager.CheckPasswordAsync(user, loginModel.Password))
+            try
             {
-                var userRoles = await userManager.GetRolesAsync(user);
+                var user = await userManager.FindByNameAsync(loginModel.Username);
+                if (user != null && await userManager.CheckPasswordAsync(user, loginModel.Password))
+                {
+                    var userRoles = await userManager.GetRolesAsync(user);
 
-                var authClaims = new List<Claim>
+                    var authClaims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.UserName),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 };
 
-                foreach (var userRole in userRoles)
-                {
-                    authClaims.Add(new Claim(ClaimTypes.Role, userRole));
+                    foreach (var userRole in userRoles)
+                    {
+                        authClaims.Add(new Claim(ClaimTypes.Role, userRole));
+                    }
+
+                    var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
+
+                    var token = new JwtSecurityToken(
+                        issuer: _configuration["JWT:ValidIssuer"],
+                        audience: _configuration["JWT:ValidAudience"],
+                        expires: DateTime.Now.AddHours(3),
+                        claims: authClaims,
+                        signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
+                        );
+
+                    var loggedUser = _appDbContext.UserLists.Where(a => a.UserIdentity.Equals(user.Id)).FirstOrDefault();
+                    tokenResponse.Status = "Success";
+                    tokenResponse.Message = "Success";
+                    tokenResponse.token = new JwtSecurityTokenHandler().WriteToken(token);
+                    tokenResponse.expiration = token.ValidTo.ToString();
+                    tokenResponse.userId = loggedUser.UserId;
+
                 }
+                else
+                {
+                    tokenResponse.Status = "401";
+                    tokenResponse.Message = "Unauthorized";
+                    tokenResponse.token = "";
+                    tokenResponse.expiration = "";
+                    tokenResponse.userId = 0;
 
-                var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
-
-                var token = new JwtSecurityToken(
-                    issuer: _configuration["JWT:ValidIssuer"],
-                    audience: _configuration["JWT:ValidAudience"],
-                    expires: DateTime.Now.AddHours(3),
-                    claims: authClaims,
-                    signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
-                    );
-
-                var loggedUser = _appDbContext.UserLists.Where(a => a.UserIdentity.Equals(user.Id)).FirstOrDefault();
-                tokenResponse.Status = "Success";
-                tokenResponse.Message = "Success";
-                tokenResponse.token = new JwtSecurityTokenHandler().WriteToken(token);
-                tokenResponse.expiration = token.ValidTo.ToString();
-                    tokenResponse.userId =loggedUser.UserId;
-
+                }
             }
-            else
+            catch (Exception e)
             {
-                tokenResponse.Status = "401";
-                tokenResponse.Message = "Unauthorized";
-                tokenResponse.token = "";
-                tokenResponse.expiration ="";
-                tokenResponse.userId = 0;
 
+               
             }
 
            return tokenResponse;

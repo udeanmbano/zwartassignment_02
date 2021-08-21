@@ -30,47 +30,56 @@ namespace ZwartsJWTApi.Repositories
         public async Task<Response> RegisterUser(RegisterModel register)
         {
             var registerResponse = new Response();
+            try
+            {
 
-            User createdUser = new User();
-            var userExists = await userManager.FindByEmailAsync(register.Email);
-            if (userExists != null) {
-                registerResponse.Status = "200";
-                registerResponse.Message = "Successfully not successful";
-                return registerResponse;
-            }
-            ApplicationUser user = new ApplicationUser()
-            {
-                Email = register.Email,
-                SecurityStamp = Guid.NewGuid().ToString(),
-                UserName = register.Username
-            };
-            var result = await userManager.CreateAsync(user, register.Password);
-            if (!result.Succeeded) {
-                registerResponse.Status = "200";
-                registerResponse.Message = "Successfully not successful";
-                return registerResponse;
-            }
-            if (!await roleManager.RoleExistsAsync(UserRoles.User))
-                await roleManager.CreateAsync(new IdentityRole(UserRoles.User));
+                User createdUser = new User();
+                var userExists = await userManager.FindByEmailAsync(register.Email);
+                if (userExists != null)
+                {
+                    registerResponse.Status = "200";
+                    registerResponse.Message = "Successfully not successful";
+                    return registerResponse;
+                }
+                ApplicationUser user = new ApplicationUser()
+                {
+                    Email = register.Email,
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                    UserName = register.Username
+                };
+                var result = await userManager.CreateAsync(user, register.Password);
+                if (!result.Succeeded)
+                {
+                    registerResponse.Status = "200";
+                    registerResponse.Message = "Successfully not successful";
+                    return registerResponse;
+                }
+                if (!await roleManager.RoleExistsAsync(UserRoles.User))
+                    await roleManager.CreateAsync(new IdentityRole(UserRoles.User));
 
-            if (await roleManager.RoleExistsAsync(UserRoles.User))
-            {
-                await userManager.AddToRoleAsync(user, UserRoles.User);
+                if (await roleManager.RoleExistsAsync(UserRoles.User))
+                {
+                    await userManager.AddToRoleAsync(user, UserRoles.User);
 
-                //add user to User Table
-                createdUser.UserIdentity = user.Id;
-                _appDbContext.UserLists.Add(createdUser);
-                await _appDbContext.SaveChangesAsync();
+                    //add user to User Table
+                    createdUser.UserIdentity = user.Id;
+                    _appDbContext.UserLists.Add(createdUser);
+                    await _appDbContext.SaveChangesAsync();
+                }
+                if (createdUser != null)
+                {
+                    registerResponse.Status = "200";
+                    registerResponse.Message = "Successfully registered";
+                }
+                else
+                {
+                    registerResponse.Status = "200";
+                    registerResponse.Message = "Successfully not successful";
+
+                }
             }
-           if (createdUser!=null)
+            catch (Exception e)
             {
-                registerResponse.Status = "200";
-                registerResponse.Message = "Successfully registered";
-            }
-            else
-            {
-                registerResponse.Status = "200";
-                registerResponse.Message = "Successfully not successful";
 
             }
             return registerResponse;

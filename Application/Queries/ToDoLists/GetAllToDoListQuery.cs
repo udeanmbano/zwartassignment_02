@@ -11,7 +11,7 @@ namespace Application.Queries.GetAllToDoList.ToDoLists
 {
     public class GetAllToDoListQuery : IRequest<IEnumerable<ToDoList>>
     {
-        public string UserID { get; set; }
+        public int UserID { get; set; }
         public class GetAllToDoListQueryHandler : IRequestHandler<GetAllToDoListQuery, IEnumerable<ToDoList>>
         {
             private readonly IToDoListRepository _todoListRepo;

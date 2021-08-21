@@ -18,7 +18,7 @@ namespace ZwartsJWTApi.Repositories
             _appDbContext = applicationDbContext;
         }
 
-        public async Task<IEnumerable<ToDoList>> GetToDoLists(string UserId)
+        public async Task<IEnumerable<ToDoList>> GetToDoLists(int UserId)
         {
 
             return await _appDbContext.toDoLists.Where(a => a.UserId == UserId).ToListAsync();
@@ -51,7 +51,11 @@ namespace ZwartsJWTApi.Repositories
         {
             try
             {
-
+                ToDoList toDoList_ = new ToDoList();
+                toDoList_.Name = toDoList.Name;
+                toDoList_.Description = toDoList.Description;
+                toDoList_.UserId =toDoList.UserId;
+              
                 await _appDbContext.AddAsync<ToDoList>(toDoList);
                 await _appDbContext.SaveChangesAsync();
             }
@@ -68,7 +72,7 @@ namespace ZwartsJWTApi.Repositories
             try
             {
                 ToDoList toDoList = await _appDbContext.toDoLists.FindAsync(toDoListId);
-                _appDbContext.toDoLists.Remove(toDoList);
+                _appDbContext.Remove(toDoList);
                 changes = await _appDbContext.SaveChangesAsync();
             }
             catch (Exception f)
@@ -82,7 +86,11 @@ namespace ZwartsJWTApi.Repositories
         {
             try
             {
-                _appDbContext.Entry(toDoList).State = EntityState.Modified;
+                ToDoList toDoList_ = await _appDbContext.toDoLists.FindAsync(toDoList.Id);
+                toDoList_.Name = toDoList.Name;
+                toDoList_.Description = toDoList.Description;
+       
+                _appDbContext.Update(toDoList_);
                 await _appDbContext.SaveChangesAsync();
             }
             catch (Exception f)
